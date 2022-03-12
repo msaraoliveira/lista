@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void concersao(int h, int m, int s);
+void conversao(int h, int m, int s);
 
 int main() {
   int h, m, s;
