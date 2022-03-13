@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int soma(int n);
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brazil");
+  
+  int numero, resultado;
+  
+  printf("Digite um número inteiro e positivo: ");
+  scanf("%d", &numero);
+  
+  resultado = soma(numero);
+  
+  printf("\nA soma dos divisores do número é: %d", resultado);
+}
+
+int soma(int n) {
+  int divisores, soma = 0; 
+  
+  for(divisores = 1; divisores <= n; divisores++) {
+    if(n % divisores == 0) {
+      soma = soma + divisores; 
+    }
+  }
+  
+  return soma;
+}
