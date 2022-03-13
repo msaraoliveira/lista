@@ -1,23 +1,24 @@
 #include <stdio.h>
 #include <locale.h>
 
-void num();
+void PouN(int num);
 
 int main() {
   setlocale(LC_ALL, "Portuguese_Brazil");
   
-  num();
-}
-
-void num() {
-  int n;
+  float n;
   
   printf("Digite um valor: ");
-  scanf("%d", &n);
+  scanf("%f", &n);
   
-  if(n > 0) {
-    printf("O número é positivo");
-  } else if(n < 0) {
-    printf("O número é negativo");
+  PouN(n);
+}
+
+void PouN(int num) {
+  
+  if(num > 0) {
+    printf("\nO número é positivo");
+  } else {
+    printf("\nO número é negativo");
   }
 }
