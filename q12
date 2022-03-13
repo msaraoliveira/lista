@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+float potencia(float X, float Z);
+
+int main() {
+  setlocale(LC_ALL, "Portuguese");
+    
+  float base, R;
+  int expoente;
+  
+  printf("Digite o valor da base: ");
+  scanf("%f", &base);
+  
+  printf("Digite o valor do expoente: ");
+  scanf("%d", &expoente);
+  
+  R = potencia(base, expoente);
+  
+  printf("\nO resultado dessa potência é: %.1f", R);
+}
+
+float potencia(float X, float Z) {
+  if(Z == 0) {
+    return 1;
+  } else {
+    return X * potencia(X, Z - 1);
+  }
+}
